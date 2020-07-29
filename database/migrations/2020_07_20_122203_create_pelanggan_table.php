@@ -21,6 +21,7 @@ class CreatePelangganTable extends Migration
             $table->string('model_type');
             $table->string('no_telp');
             $table->string('retention_out');
+            $table->string('status');
             $table->timestamps();
         });
     }
