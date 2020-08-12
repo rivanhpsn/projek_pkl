@@ -11,14 +11,14 @@
   <!-- Sidebar -->
   <div class="sidebar">
     <!-- Sidebar user (optional) -->
-    <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+    {{-- <div class="user-panel mt-3 pb-3 mb-3 d-flex">
       <div class="image">
         <img src="{{ asset('/adminlte/dist/img/user2-160x160.jpg')}}" class="img-circle elevation-2" alt="User Image">
       </div>
       <div class="info">
         <a href="#" class="d-block">Alexander Pierce</a>
       </div>
-    </div>
+    </div> --}}
 
     <!-- Sidebar Menu -->
     <nav class="mt-2">
@@ -27,8 +27,8 @@
           <a href="/" class="nav-link">
             <i class="nav-icon fas fa-th"></i>
             <p>
-              ERD
-              <span class="right badge badge-danger">New</span>
+              Home
+              {{-- <span class="right badge badge-danger">New</span> --}}
             </p>
           </a>
         </li>
@@ -36,20 +36,20 @@
              with font-awesome or any other icon font library -->
              
         <li class="nav-item">
-          <a href="/pertanyaan" class="nav-link">
+          <a href="/pelanggan" class="nav-link">
             <i class="nav-icon fas fa-th"></i>
             <p>
-              Pertanyaan
-              <span class="right badge badge-danger">New</span>
+              Pelanggan
+              {{-- <span class="right badge badge-danger">New</span> --}}
             </p>
           </a>
         </li>
         <li class="nav-item">
-          <a href="/jawaban" class="nav-link">
+          <a href="/bookings" class="nav-link">
             <i class="nav-icon fas fa-th"></i>
             <p>
-              Jawaban
-              <span class="right badge badge-danger">New</span>
+              List Booking
+              {{-- <span class="right badge badge-danger">New</span> --}}
             </p>
           </a>
         </li>

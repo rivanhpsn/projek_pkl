@@ -4,18 +4,19 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Pelanggan extends Model
+class Respon extends Model
 {
-    protected $table="pelanggan";
-
     protected $guarded = [];
 
-    public function respon() {
-        return $this->belongsTo('App\Respon');
+    public function pelanggan(){
+        return $this->hasMany('App\Pelanggan');
     }
 
     public function booking(){
         return $this->hasMany('App\Booking');
     }
 
+    public function user(){
+        return $this->hasMany('App\User');
+    }
 }

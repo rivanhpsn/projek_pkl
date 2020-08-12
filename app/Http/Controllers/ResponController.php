@@ -3,12 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Pelanggan;
-use App\models\PelangganModel;
 use App\Respon;
-use App\User; 
 
-class PelangganController extends Controller
+class ResponController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,9 +14,8 @@ class PelangganController extends Controller
      */
     public function index()
     {
-        $pelanggan = Pelanggan::all();
-        // dd($pelanggan);
-        return view('pelanggan.index', compact('pelanggan'));
+        $respons = Respon::all();
+        return view('respon.index', compact('respons'));
     }
 
     /**
@@ -29,8 +25,7 @@ class PelangganController extends Controller
      */
     public function create()
     {
-        $respons = Respon::all();
-        return view('pelanggan.form', compact('respons'));
+        return view('respon.form');
     }
 
     /**
@@ -41,16 +36,11 @@ class PelangganController extends Controller
      */
     public function store(Request $request)
     {
-        // dd($request->all());
-        $new_pel = Pelanggan::create([
-            "nama" => $request["nama"],
-            "no_polisi" => $request["no_polisi"],
-            "model_type" => $request["model_type"],
-            "no_telp" => $request["no_telp"],
-            "respon_id" => $request["respon_id"]
+        $new_resp = Respon::create([
+            'nama' => $request['nama']
         ]);
 
-        return redirect('/pelanggan');
+        return redirect('/respons');
     }
 
     /**
@@ -61,9 +51,7 @@ class PelangganController extends Controller
      */
     public function show($id)
     {
-        $pelanggan = Pelanggan::find($id);
-        // dd($pertanyaan->tags);
-        return view('pelanggan.show', compact('pelanggan'));
+        //
     }
 
     /**
@@ -74,9 +62,7 @@ class PelangganController extends Controller
      */
     public function edit($id)
     {
-        $pelanggan = PelangganModel::find_by_id($id);
-        $respons = Respon::all();
-        return view('pelanggan.edit', compact('pelanggan','respons'));
+        //
     }
 
     /**
@@ -88,12 +74,7 @@ class PelangganController extends Controller
      */
     public function update(Request $request, $id)
     {
-        Pelanggan::where('id',$id)
-            ->update([
-                'judul' => $request->judul,
-                'isi' => $request->isi,
-            ]);
-        return redirect('/pelanggan');
+        //
     }
 
     /**
@@ -104,7 +85,6 @@ class PelangganController extends Controller
      */
     public function destroy($id)
     {
-        $deleted = Pelanggan::destroy($id);
-        return redirect('/pelanggan');
+        //
     }
 }

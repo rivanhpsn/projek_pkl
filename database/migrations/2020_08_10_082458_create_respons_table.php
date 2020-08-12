@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePelangganTable extends Migration
+class CreateResponsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,9 @@ class CreatePelangganTable extends Migration
      */
     public function up()
     {
-        Schema::create('pelanggan', function (Blueprint $table) {
+        Schema::create('respons', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nama');
-            $table->string('contact_person');
-            $table->string('no_polisi');
-            $table->string('model_type');
-            $table->string('no_telp');
-            $table->string('retention_out');
-            $table->string('status');
             $table->timestamps();
         });
     }
@@ -33,6 +27,6 @@ class CreatePelangganTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pelanggan');
+        Schema::dropIfExists('respon');
     }
 }
