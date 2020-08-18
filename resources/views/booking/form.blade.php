@@ -25,6 +25,11 @@
             <label for="pelanggan_id">No. Telpon : </label>
             <input type="text" class="form-control" readonly  value="{{$pelanggan->no_telp}}">
         </div>
+        <div>
+        <p>Hubungi Pelanggan : </p>
+        <a href="tel:{{$pelanggan->no_telp}}"><img src="{{asset('/img/clipart1243931.png')}}" alt="" width="10%" /></a>
+        </div>
+        <br>
         <div class="form-group"> 
             <label for="contact_person">Penjawab : </label>
             <input type="text" class="form-control" name="contact_person" placeholder="Masukkan nama penjawab" id="contact_person">
@@ -33,7 +38,11 @@
           <label for="respon_id">Respon</label>
           <select name="respon_id" id="respon_id" class="form-control">
             @foreach ($respons as $respon)
-              <option value="{{$respon->id}}"> {{ $respon->nama }} </option>
+              @if ($respon->id == $pelanggan->respon_id)
+                <option value="{{$respon->id}}" selected> {{ $respon->nama }} </option>
+              @else 
+                <option value="{{$respon->id}}"> {{ $respon->nama }} </option>
+              @endif
             @endforeach
           </select>
         </div>

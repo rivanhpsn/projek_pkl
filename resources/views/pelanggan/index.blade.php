@@ -1,10 +1,17 @@
 @extends('adminlte.master')
 
 @section('content')
+<div class="col-sm-6">
+    <h2 class="ml-3 mt-1">Data Pelanggan</h1>
+</div>    
+<br>
 {{-- <div class="content-wrapper"> --}}
-    <div class="card">    
+<div class="container-fluid">
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Data pelanggan</h3>
+        </div>
         <div class="card-body">
-            <h3>Data Pelanggan</h3>
             <table id="datatable" class="table table-bordered table-striped">
                 <thead>
                 <tr>
@@ -30,7 +37,7 @@
                             {{-- <a class="btn btn-primary"  href="/jawaban/{{$pertanyaan->id}}" role="button" >Jawab</a> --}}
                             <a class="btn btn-primary"  href="/pelanggan/{{$pelanggan->id}}" role="button" >Detail</a>
                             {{-- <a class="btn btn-primary"  href="/pelanggan/{{$pelanggan->id}}/edit" role="button" >Edit</a> --}}
-                            <a href="/bookings/{{$pelanggan->id}}/edit" class="btn btn-primary ">Hubungi</a>
+                            <a href="/bookings/{{$pelanggan->id}}/edit" class="btn btn-success ">Hubungi</a>
                         </td>
                         {{-- <td> {{ $pertanyaan -> like}}</td>
                         <td> {{ $pertanyaan -> dislike}}</td> --}}
@@ -44,6 +51,7 @@
             </div>
         </div>
     </div>
+</div>
 {{-- </div> --}}
 @endsection
 
