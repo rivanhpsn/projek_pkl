@@ -7,6 +7,7 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   @stack('cssDT')
+  @stack('cssChart')
   <!-- Font Awesome -->
   <link rel="stylesheet" href="{{ asset('/adminlte/plugins/fontawesome-free/css/all.min.css')}} ">
   <!-- Ionicons -->
@@ -57,11 +58,9 @@
 <script src="{{ asset('/adminlte/dist/js/adminlte.min.js')}}"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{{ asset('/adminlte/dist/js/demo.js')}}"></script>
-<script>
-  var items = ["halo", "ini", "items", "di", "master"];
-</script>
 
 @stack('jsDT')
+@stack('jsChart')
 @stack('scripts')
 
 </body>

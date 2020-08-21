@@ -31,7 +31,7 @@
         </div>
         <br>
         <div class="form-group"> 
-            <label for="contact_person">Penjawab : </label>
+            <label for="contact_person">Penjawab (kosongkan jika tidak menjawab) : </label>
             <input type="text" class="form-control" name="contact_person" placeholder="Masukkan nama penjawab" id="contact_person">
         </div>
         <div class="form-group">

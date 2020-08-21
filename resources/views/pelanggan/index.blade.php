@@ -17,11 +17,12 @@
                 <tr>
                     <th scope="col">No.</th>
                     <th scope="col">Nama Pelanggan</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Aksi</th>
                     <th scope="col">No Polisi</th>
                     <th scope="col">Tipe Mobil</th>
                     <th scope="col">No. Telp</th>
-                    <th scope="col">Status</th>
-                    <th scope="col">Aksi</th>
+                    
                 </tr>
                 </thead>
                 <tbody>
@@ -29,16 +30,18 @@
                         <tr id="{{$pelanggan->id}}">
                         <td> {{ $key + 1}}</td>
                         <td> {{ $pelanggan->nama}}</td>
-                        <td> {{ $pelanggan->no_polisi}}</td>
-                        <td> {{ $pelanggan->model_type}}</td>
-                        <td> {{ $pelanggan->no_telp}}</td>
                         <td> {{ $pelanggan->respon->nama}}</td>
                         <td>
                             {{-- <a class="btn btn-primary"  href="/jawaban/{{$pertanyaan->id}}" role="button" >Jawab</a> --}}
-                            <a class="btn btn-primary"  href="/pelanggan/{{$pelanggan->id}}" role="button" >Detail</a>
+                            {{-- <a class="btn btn-primary"  href="/pelanggan/{{$pelanggan->id}}" role="button" >Detail</a> --}}
                             {{-- <a class="btn btn-primary"  href="/pelanggan/{{$pelanggan->id}}/edit" role="button" >Edit</a> --}}
                             <a href="/bookings/{{$pelanggan->id}}/edit" class="btn btn-success ">Hubungi</a>
                         </td>
+                        <td> {{ $pelanggan->no_polisi}}</td>
+                        <td> {{ $pelanggan->model_type}}</td>
+                        <td> {{ $pelanggan->no_telp}}</td>
+                        
+                        
                         {{-- <td> {{ $pertanyaan -> like}}</td>
                         <td> {{ $pertanyaan -> dislike}}</td> --}}
                         </tr>

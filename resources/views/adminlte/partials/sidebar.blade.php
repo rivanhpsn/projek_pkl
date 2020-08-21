@@ -37,7 +37,7 @@
              
         <li class="nav-item">
           <a href="/pelanggan" class="nav-link">
-            <i class="nav-icon fas fa-th"></i>
+            <i class="nav-icon fas fa-table"></i>
             <p>
               Pelanggan
               {{-- <span class="right badge badge-danger">New</span> --}}
@@ -46,9 +46,18 @@
         </li>
         <li class="nav-item">
           <a href="/bookings" class="nav-link">
-            <i class="nav-icon fas fa-th"></i>
+            <i class="nav-icon fas fa-table"></i>
             <p>
               List Booking
+              {{-- <span class="right badge badge-danger">New</span> --}}
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/chart" class="nav-link">
+            <i class="nav-icon fas fa-chart-pie"></i>
+            <p>
+              Grafik MRA/SA
               {{-- <span class="right badge badge-danger">New</span> --}}
             </p>
           </a>

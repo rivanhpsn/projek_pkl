@@ -20,6 +20,9 @@ Route::group(['middleware' => 'auth'], function(){
     Route::resource('pelanggan', 'PelangganController');
     Route::resource('respons', 'ResponController');
     Route::resource('bookings', 'BookingController');
+    Route::get('/chart', function () {
+        return view('chart');
+    });
 });
 Auth::routes();
 
