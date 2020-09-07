@@ -13,6 +13,7 @@
         <style>
             html, body {
                 background-color: #fff;
+                background-image: url("img/pngfind.com-red-line-png-473442.png");
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;

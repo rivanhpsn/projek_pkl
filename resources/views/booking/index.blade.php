@@ -19,29 +19,24 @@
                         <th scope="col">MRA/SA</th>
                         <th scope="col">Nama Pelanggan</th>
                         <th scope="col">Status</th>
+                        <th scope="col">Kategori</th>
                         <th scope="col">No. Telp</th>
                         <th scope="col">Penjawab</th>
                         <th scope="col">Tanggal Servis</th>
                     </tr>
                     </thead>
                     <tbody>
+                        {{-- {{$bookings}} --}}
                         @foreach ($bookings as $key => $booking)
                             <tr id="{{$booking->id}}">
                             <td> {{ $key + 1}}</td>
                             <td> {{ $booking->user->name}}</td>
                             <td> {{ $booking->pelanggan->nama}}</td>
                             <td> {{ $booking->respon->nama}}</td>
+                            <td> {{ $booking->category->name}}</td>
                             <td> {{ $booking->pelanggan->no_telp}}</td>
                             <td> {{ $booking->contact_person}}</td>
                             <td> {{ $booking->tgl_servis}}</td>
-                            {{-- <td>
-                                <a class="btn btn-primary"  href="/jawaban/{{$pertanyaan->id}}" role="button" >Jawab</a>
-                                <a class="btn btn-primary"  href="/pelanggan/{{$pelanggan->id}}" role="button" >Detail</a>
-                                <a class="btn btn-primary"  href="/pelanggan/{{$pelanggan->id}}/edit" role="button" >Edit</a>
-                                <a href="/bookings/{{$pelanggan->id}}/edit" class="btn btn-primary ">Hubungi</a>
-                            </td> --}}
-                            {{-- <td> {{ $pertanyaan -> like}}</td>
-                            <td> {{ $pertanyaan -> dislike}}</td> --}}
                             </tr>
                         @endforeach
                     </tbody>

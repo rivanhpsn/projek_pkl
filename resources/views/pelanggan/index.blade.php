@@ -19,6 +19,7 @@
                     <th scope="col">Nama Pelanggan</th>
                     <th scope="col">Status</th>
                     <th scope="col">Aksi</th>
+                    <th scope="col">Kategori</th>
                     <th scope="col">No Polisi</th>
                     <th scope="col">Tipe Mobil</th>
                     <th scope="col">No. Telp</th>
@@ -37,6 +38,7 @@
                             {{-- <a class="btn btn-primary"  href="/pelanggan/{{$pelanggan->id}}/edit" role="button" >Edit</a> --}}
                             <a href="/bookings/{{$pelanggan->id}}/edit" class="btn btn-success ">Hubungi</a>
                         </td>
+                        <td> {{ $pelanggan->category->name}}</td>
                         <td> {{ $pelanggan->no_polisi}}</td>
                         <td> {{ $pelanggan->model_type}}</td>
                         <td> {{ $pelanggan->no_telp}}</td>

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Pelanggan;
 use App\models\PelangganModel;
 use App\Respon;
+use App\Category;
 use App\User; 
 
 class PelangganController extends Controller
@@ -18,7 +19,7 @@ class PelangganController extends Controller
     public function index()
     {
         $pelanggan = Pelanggan::all();
-        // dd($pelanggan);
+        // dd($pelanggan->all());
         return view('pelanggan.index', compact('pelanggan'));
     }
 
@@ -30,7 +31,9 @@ class PelangganController extends Controller
     public function create()
     {
         $respons = Respon::all();
-        return view('pelanggan.form', compact('respons'));
+        $categories = Category::all();
+        return view('pelanggan.form', compact('respons','categories'));
+        
     }
 
     /**
@@ -47,7 +50,8 @@ class PelangganController extends Controller
             "no_polisi" => $request["no_polisi"],
             "model_type" => $request["model_type"],
             "no_telp" => $request["no_telp"],
-            "respon_id" => $request["respon_id"]
+            "respon_id" => $request["respon_id"],
+            "category_id" => $request["category_id"]
         ]);
 
         return redirect('/pelanggan');

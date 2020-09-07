@@ -38,6 +38,6 @@ class User extends Authenticatable
     ];
 
     public function booking(){
-        return $this->hasMany('App\Booking');
+        return $this->hasMany('App\Booking','booking_id');
     }
 }

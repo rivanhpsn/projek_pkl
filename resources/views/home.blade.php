@@ -15,7 +15,9 @@
                     @endif
 
                     You are logged in!
+                    
                 </div>
+                <a class="btn btn-primary"  href="/pelanggan" role="button" >Menuju Dashboard</a>
             </div>
         </div>
     </div>

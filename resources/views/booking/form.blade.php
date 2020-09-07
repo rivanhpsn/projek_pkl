@@ -22,13 +22,18 @@
             <input type="text" class="form-control" readonly  value="{{$pelanggan->nama}}">
         </div>
         <div class="form-group">
+          <label for="category_id">Kategori : </label>
+          <input type="text" class="form-control" readonly  value="{{$pelanggan->category->name}}"> 
+       </div>
+        
+        <div class="form-group">
             <label for="pelanggan_id">No. Telpon : </label>
             <input type="text" class="form-control" readonly  value="{{$pelanggan->no_telp}}">
         </div>
         <div>
-        <p>Hubungi Pelanggan : </p>
-        <a href="tel:{{$pelanggan->no_telp}}"><img src="{{asset('/img/clipart1243931.png')}}" alt="" width="10%" /></a>
+        <label>Hubungi Pelanggan : </label>
         </div>
+        <a href="tel:{{$pelanggan->no_telp}}"><img src="{{asset('/img/clipart1243931.png')}}" alt="" width="10%" /></a>
         <br>
         <div class="form-group"> 
             <label for="contact_person">Penjawab (kosongkan jika tidak menjawab) : </label>
@@ -53,6 +58,7 @@
         
         <input hidden name="user_id" value="{{Auth::user()->id}}">
         <input hidden name="pelanggan_id" value="{{$pelanggan->id}}">
+        <input hidden name="category_id" value="{{$pelanggan->category->id}}">
         <input hidden name="created_at" value="{{\Carbon\Carbon::now()}}">
         <input hidden name="updated_at" value="{{\Carbon\Carbon::now()}}">
         <br>

@@ -2,14 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Booking;
-use App\Respon;
 use App\Category;
-use App\Pelanggan;
-use App\User;
 use Illuminate\Http\Request;
 
-class BookingController extends Controller
+class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,10 +14,8 @@ class BookingController extends Controller
      */
     public function index()
     {
-        $bookings = Booking::all();
-        // $bookings = Booking::with(['user','pelanggan','respon','category'])->get();
-        // dd($bookings);
-        return view('booking.index', compact('bookings'));
+        $categories = Category::all();
+        return view('category.index', compact('categories'));
     }
 
     /**
@@ -31,12 +25,7 @@ class BookingController extends Controller
      */
     public function create()
     {
-        $users = User::all();
-        $respons = Respon::all();
-        $categories = Category::all();
-        $pelanggan = Pelanggan::all();
-        
-        return view('booking.form', compact('users','respons','categories','pelanggan'));
+        //
     }
 
     /**
@@ -47,17 +36,11 @@ class BookingController extends Controller
      */
     public function store(Request $request)
     {
-        // $new_book = Booking::create([
-        //     "name" => $request["name"],
-        //     "description" => $request["description"],
-        //     "price" => $request["price"],
-        //     "stock" => $request["stock"],
-        //     "category_id" => $request["category_id"]
-        // ]);
-        // dd($request->all());
-        Booking::create($request->all());
-        
-        return redirect('/bookings');
+        $new_cat = Category::create([
+            'name' => $request['name']
+        ]);
+
+        return redirect('/categories');
     }
 
     /**
@@ -68,9 +51,7 @@ class BookingController extends Controller
      */
     public function show($id)
     {
-        $booking = Booking::find($id);
-        // dd($item->tags);
-        return view('booking.show', compact('booking'));
+        //
     }
 
     /**
@@ -81,11 +62,7 @@ class BookingController extends Controller
      */
     public function edit($id)
     {
-        $pelanggan = Pelanggan::find($id);
-        $users = User::all();
-        $respons = Respon::all();
-        $categories = Category::all();
-        return view('booking.form', compact('users','respons','categories','pelanggan'));
+        //
     }
 
     /**
@@ -97,7 +74,7 @@ class BookingController extends Controller
      */
     public function update(Request $request, $id)
     {
-        return "update";
+        //
     }
 
     /**
