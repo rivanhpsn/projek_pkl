@@ -13,7 +13,7 @@ class PelangganModel {
   }
 
   public static function save($data) {
-    // data _token nya dibuang
+    // data _token nya dibuang aja
     unset($data["_token"]);
     $new_pelanggan = DB::table('pelanggan')->insert($data);
     return $new_pelanggan;
