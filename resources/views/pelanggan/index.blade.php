@@ -51,7 +51,7 @@
                 </tbody>
             </table>
             <div class= "ml-3 mt-3" align="right">
-                <a class="btn btn-primary"  href="/pelanggan/create" role="button" >+ Input Pelanggan</a>
+                {{-- <a class="btn btn-primary"  href="/pelanggan/create" role="button" >+ Input Pelanggan</a> --}}
                 <a class="btn btn-info"  href="/bookings" role="button" >List Booking</a>
             </div>
         </div>
